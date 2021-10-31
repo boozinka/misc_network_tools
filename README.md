@@ -12,3 +12,6 @@ Works the same as "ipv4_dns_resolver.py" but works for both IPv4 and IPv6 IP add
 
 Reads in a file (.txt or .csv) containing a list treating the entries as strings. It then removes any duplicate entries and prints the output to a new .csv file. 
 
+#### as_num_parse.py
+
+Reads in the ouput from "show ip bgp", parses all the BGP AS numbers from the output and writes them to a file in ranges.
