@@ -15,3 +15,7 @@ Reads in a file (.txt or .csv) containing a list treating the entries as strings
 #### as_num_parse.py
 
 Reads in the ouput from "show ip bgp", parses all the BGP AS numbers from the output and writes them to a file in ranges.
+
+#### cidr_creator.py
+
+Reads in a list of IPv4 addresses as strings, calculates the available CIDR subnets and outputs them
