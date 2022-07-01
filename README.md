@@ -1,6 +1,7 @@
 ## misc_network_tools
 
-### Install/Upgrade PIP Using get-pip.py
+
+### Install/Upgrade PIP using get-pip.py
 
 This is a Python script that uses some bootstrapping logic to install pip.
 
@@ -9,6 +10,7 @@ This is a Python script that uses some bootstrapping logic to install pip.
  - Open a terminal/command prompt, cd to the folder containing the get-pip.py file and run:
 
     python get-pip.py
+
 
 #### ipv4_dns_resolver.py
 
