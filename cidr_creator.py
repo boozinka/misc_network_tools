@@ -62,8 +62,13 @@ def remove_duplicates(my_list):
     for line in my_list:
         strip_list.append(line.rstrip())
 
-    # Convert to dictionary and returns a list to remove duplicates
-    return list(dict.fromkeys(strip_list))
+    # Convert to dictionary to remove duplicates, and then back to a list.
+    new_list = list(dict.fromkeys(strip_list))
+    os.system('cls')
+    print('\nThere are', len(new_list), 'unique prefixes in the list.\n')
+    input('Press enter to continue')
+  
+    return new_list
 
 
 def get_ipv4_list(file_name):
@@ -100,9 +105,19 @@ def print_subnets(cidr_list):
     print()
     print(f'{"CIDR Prefix":>20}')
     print('-'*20)
-    print()
+    x = 0
     for cidr in cidr_list:
-        print(f'{str(cidr):>20}')
+        # Pauses screen every 25 lines
+        if x <= 25:
+            print(f'{str(cidr):>20}')
+            x +=1
+        else:
+            input('\nPress enter to continue.')
+            print()
+            print(f'{"CIDR Prefix":>20}')
+            print('-'*20)
+            x = 0
+            
     print('\n\n')
 
 
@@ -151,5 +166,5 @@ def main():
 
     input('\nPress enter to exit the program')
 
-    
+
 main()
