@@ -1,0 +1,73 @@
+Read File
+=============
+
+def read_file_string(my_file):
+    """ Open and read whole file as a string """
+
+    try:
+        with open(my_file) as jase_file:
+            string_output = jase_file.read()
+    except PermissionError:
+        print("Error occured, you do not have permission to read this file")
+            
+    return string_output
+
+
+Read File line by line
+===========================
+
+def read_file_line(my_file):
+    """ Read a file line by line until EOF """
+    
+    try:
+        with open(my_file) as jase_file:
+            while True:
+                line = jase_file.readline()
+                if not line:
+                    break
+                print(line)
+    except PermissionError:
+        print("Error occured, you do not have permission to read this file")
+
+------------------------------------------------------------------------------
+
+
+def read_file_line_con(my_file):
+    """ Concise way to read a file line by line until EOF """
+
+    try:
+        with open(my_file) as jase_file:
+            for line in jase_file:
+                print(line.strip())
+    except PermissionError:
+        print("Error occured, you do not have permission to read this file")
+
+
+
+Readlines
+=============
+
+
+def read_file_lines(my_file):
+    """ Open and read whole file, with each line as a list element """
+
+    try:
+        with open(my_file) as jase_file:
+            file_list = jase_file.readlines()
+    except PermissionError:
+        print("Error occured, you do not have permission to read this file")
+        
+    return file_list
+
+------------------------------------------------------------------------------
+
+def read_file_lines(my_file):
+    """ Open and read whole file, with each line as a list element """
+
+    try:
+        with open(my_file) as jase_file:
+            # Strip whitespace and "\n" from each line
+            file_list = [line.strip() for line in jase_file.readlines()]
+    except PermissionError:
+        print("Error occured, you do not have permission to read this file")
+    return file_list
